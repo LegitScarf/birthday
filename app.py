@@ -22,25 +22,24 @@ st.markdown("""
     
     .main-title {
         font-family: 'Playfair Display', serif;
-        font-size: 4rem;
-        font-weight: 700;
+        font-size: 4.5rem;
+        font-weight: 900;
         color: white;
         text-align: center;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        text-shadow: 3px 3px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5);
         margin-bottom: 20px;
-        background: linear-gradient(45deg, #fff, #fce4ec);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        letter-spacing: 2px;
+        transform: scale(1.05);
     }
     
     .subtitle {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: white;
         text-align: center;
-        font-weight: 300;
+        font-weight: 700;
         margin-bottom: 30px;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.4);
+        letter-spacing: 1px;
     }
     
     .love-message {
@@ -86,10 +85,12 @@ st.markdown("""
     
     .memory-title {
         font-family: 'Playfair Display', serif;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: white;
         margin-bottom: 10px;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.3), 0 0 12px rgba(255,255,255,0.4);
+        font-weight: 800;
+        letter-spacing: 1px;
     }
     
     .memory-text {
@@ -189,7 +190,7 @@ with col2:
 
 # Photo gallery section
 st.markdown("<br><br>", unsafe_allow_html=True)
-st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Our Beautiful Memories 📸</h2>', unsafe_allow_html=True)
+st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 3rem; font-weight: 900; text-shadow: 3px 3px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5); letter-spacing: 2px;">Our Beautiful Memories 📸</h2>', unsafe_allow_html=True)
 
 # Image upload section
 col1, col2, col3 = st.columns(3)
@@ -235,7 +236,7 @@ with col3:
 
 # Reasons why I love you section
 st.markdown("<br><br>", unsafe_allow_html=True)
-st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Reasons Why I Love You 💖</h2>', unsafe_allow_html=True)
+st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 3rem; font-weight: 900; text-shadow: 3px 3px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5); letter-spacing: 2px;">Reasons Why I Love You 💖</h2>', unsafe_allow_html=True)
 
 reasons = [
     ("Your Beautiful Smile", "Your smile has the power to brighten even my darkest days and makes everything feel perfect."),
@@ -259,7 +260,7 @@ for i, (title, reason) in enumerate(reasons):
 
 # Birthday countdown or celebration
 st.markdown("<br><br>", unsafe_allow_html=True)
-st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Birthday Celebration 🎉</h2>', unsafe_allow_html=True)
+st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 3rem; font-weight: 900; text-shadow: 3px 3px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5); letter-spacing: 2px;">Birthday Celebration 🎉</h2>', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1, 2, 1])
 
@@ -285,7 +286,7 @@ with col2:
 
 # Personal message section
 st.markdown("<br><br>", unsafe_allow_html=True)
-st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">A Special Message Just for You 💌</h2>', unsafe_allow_html=True)
+st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 3rem; font-weight: 900; text-shadow: 3px 3px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5); letter-spacing: 2px;">A Special Message Just for You 💌</h2>', unsafe_allow_html=True)
 
 # Text area for personal message (you can pre-fill this)
 personal_message = st.text_area(
