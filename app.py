@@ -11,9 +11,9 @@ st.set_page_config(
 )
 
 # Image URLs - Replace these with your actual image URLs
-IMAGE_URL_1 = "https://your-image-host.com/image1.jpg"  # Replace with your first image URL
-IMAGE_URL_2 = "https://your-image-host.com/image2.jpg"  # Replace with your second image URL  
-IMAGE_URL_3 = "https://your-image-host.com/image3.jpg"  # Replace with your third image URL
+IMAGE_URL_1 = "https://ibb.co/j9bLq9ct"  # Replace with your first image URL
+IMAGE_URL_2 = "https://ibb.co/TqN3fXqh"  # Replace with your second image URL  
+IMAGE_URL_3 = "https://ibb.co/Z1xhBDnh"  # Replace with your third image URL
 
 # Custom CSS for beautiful styling
 st.markdown("""
