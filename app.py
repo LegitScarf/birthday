@@ -181,7 +181,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Main title
-st.markdown('<h1 class="main-title">Happy Birthday My Love! 🎂</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title">Happy Birthday Saloni 🎂</h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Today is all about celebrating the amazing person you are ✨</p>', unsafe_allow_html=True)
 
 # Add some space
@@ -195,10 +195,17 @@ with col2:
     st.markdown('''
     <div class="love-message">
         <p class="message-text">
-            My dearest love, on this special day, I want you to know that you bring sunshine to my darkest days 
-            and make every moment brighter just by being in my life. Your smile lights up my world, 
-            and your laugh is my favorite sound. You are not just my girlfriend, you are my best friend, 
-            my inspiration, and my greatest blessing. Happy Birthday to the most incredible woman I know! 💕
+            My dearest Saloni,
+
+On this special day, I just want to pause and let you know how much you truly mean to me. You bring sunshine into my darkest days and somehow make even the ordinary moments feel extraordinary just by being in my life. Every time I look at you, I see the most beautiful soul, inside and out, and I cannot help but feel grateful that I get to call you mine.
+
+Your smile lights up my world in ways words could never fully describe, and your laughter—oh, your laughter—is my favorite sound. It has this magic that can instantly melt away all my worries and replace them with joy. You are not just my girlfriend; you are my best friend, my safe place, my inspiration, and my greatest blessing.
+
+I admire the way you love, the way you care, and the way you make life so much brighter for everyone around you. With you, I’ve learned what it means to be truly happy, and I can’t imagine my journey without you by my side.
+
+ May this year bring you endless love, laughter, and everything your heart desires, because you deserve nothing less than the absolute best.
+
+Happy Birthday, my love. Thank you for being the reason behind my happiest days and for making life so beautifully worth living. 💕
         </p>
     </div>
     ''', unsafe_allow_html=True)
@@ -302,7 +309,7 @@ st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair 
 # Text area for personal message (you can pre-fill this)
 personal_message = st.text_area(
     "Add your personal birthday message here:",
-    value="My love, as you celebrate another year of your incredible life, I want you to know that loving you has been the greatest adventure of my life. You make every day feel like a celebration, and today, we celebrate YOU! Thank you for being the amazing, beautiful, strong, and loving person that you are. I can't wait to create many more memories with you. Happy Birthday, my darling! 💕",
+    value="My love, as you celebrate another year of your incredible life, I want you to know that loving you has been the greatest adventure of my life. You make every day feel like a celebration, and today, we celebrate YOU! Thank you for being the amazing, beautiful, strong, and loving person that you are. I can't wait to create many more memories with you. Happy Birthday babe! 💕",
     height=150,
     key="personal_message"
 )
