@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # Image URLs - Replace these with your actual image URLs
-IMAGE_URL_1 = "https://ibb.co/j9bLq9ct"  # Replace with your first image URL
+IMAGE_URL_1 = "https://github.com/LegitScarf/birthday/blob/main/WhatsApp%20Image%202025-08-27%20at%2023.38.09_e0e63a59.jpg"  # Replace with your first image URL
 IMAGE_URL_2 = "https://ibb.co/TqN3fXqh"  # Replace with your second image URL  
 IMAGE_URL_3 = "https://ibb.co/Z1xhBDnh"  # Replace with your third image URL
 
