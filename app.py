@@ -141,6 +141,153 @@ st.markdown("""
     
     .countdown-label {
         font-size: 1rem;
+        color: white;import streamlit as st
+import time
+from datetime import datetime
+
+# Page configuration
+st.set_page_config(
+    page_title="Happy Birthday My Love ❤️",
+    page_icon="🎂",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# Custom CSS for beautiful styling
+st.markdown("""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@300;400;500&display=swap');
+    
+    .stApp {
+        background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #f48fb1 100%);
+        background-attachment: fixed;
+    }
+    
+    .main-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 4.5rem;
+        font-weight: 900;
+        color: white !important;
+        text-align: center;
+        text-shadow: 3px 3px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5);
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        transform: scale(1.05);
+    }
+    
+    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+        color: white !important;
+    }
+    
+    .subtitle {
+        font-size: 1.8rem;
+        color: white;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.4);
+        letter-spacing: 1px;
+    }
+    
+    .love-message {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .message-text {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    .photo-frame {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        transition: transform 0.3s ease;
+    }
+    
+    .photo-frame:hover {
+        transform: scale(1.05);
+    }
+    
+    .memory-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .memory-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: white;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.3), 0 0 12px rgba(255,255,255,0.4);
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+    
+    .memory-text {
+        color: white;
+        font-size: 1rem;
+        line-height: 1.6;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    .floating-hearts {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1000;
+    }
+    
+    .heart {
+        position: absolute;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+        50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+    }
+    
+    .countdown-box {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .countdown-number {
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .countdown-label {
+        font-size: 1rem;
         color: white;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -192,47 +339,53 @@ with col2:
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown('<h2 style="text-align: center; color: white; font-family: Playfair Display; font-size: 3rem; font-weight: 900; text-shadow: 3px 3px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5); letter-spacing: 2px;">Our Beautiful Memories 📸</h2>', unsafe_allow_html=True)
 
-# Image upload section
+# Image URLs - Replace these with your actual image URLs
+IMAGE_URL_1 = "https://your-image-host.com/image1.jpg"  # Replace with your first image URL
+IMAGE_URL_2 = "https://your-image-host.com/image2.jpg"  # Replace with your second image URL  
+IMAGE_URL_3 = "https://your-image-host.com/image3.jpg"  # Replace with your third image URL
+
+# You can upload images to:
+# - GitHub (raw.githubusercontent.com links)
+# - Imgur 
+# - Google Drive (with proper sharing)
+# - Any image hosting service
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    uploaded_file1 = st.file_uploader("Add a special photo", type=['png', 'jpg', 'jpeg'], key="photo1")
-    if uploaded_file1:
-        st.markdown('<div class="photo-frame">', unsafe_allow_html=True)
-        st.image(uploaded_file1, use_column_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    else:
+    st.markdown('<div class="photo-frame">', unsafe_allow_html=True)
+    try:
+        st.image(IMAGE_URL_1, use_column_width=True, caption="Our Beautiful Memory ❤️")
+    except:
         st.markdown('''
-        <div class="photo-frame" style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1);">
-            <p style="color: white; text-align: center;">Upload our<br>favorite photo ❤️</p>
+        <div style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); border-radius: 15px;">
+            <p style="color: white; text-align: center;">Replace IMAGE_URL_1<br>with your photo URL ❤️</p>
         </div>
         ''', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 with col2:
-    uploaded_file2 = st.file_uploader("Add another memory", type=['png', 'jpg', 'jpeg'], key="photo2")
-    if uploaded_file2:
-        st.markdown('<div class="photo-frame">', unsafe_allow_html=True)
-        st.image(uploaded_file2, use_column_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    else:
+    st.markdown('<div class="photo-frame">', unsafe_allow_html=True)
+    try:
+        st.image(IMAGE_URL_2, use_column_width=True, caption="Another Special Moment 📷")
+    except:
         st.markdown('''
-        <div class="photo-frame" style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1);">
-            <p style="color: white; text-align: center;">Another beautiful<br>moment together 📷</p>
+        <div style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); border-radius: 15px;">
+            <p style="color: white; text-align: center;">Replace IMAGE_URL_2<br>with your photo URL 📷</p>
         </div>
         ''', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 with col3:
-    uploaded_file3 = st.file_uploader("One more special moment", type=['png', 'jpg', 'jpeg'], key="photo3")
-    if uploaded_file3:
-        st.markdown('<div class="photo-frame">', unsafe_allow_html=True)
-        st.image(uploaded_file3, use_column_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    else:
+    st.markdown('<div class="photo-frame">', unsafe_allow_html=True)
+    try:
+        st.image(IMAGE_URL_3, use_column_width=True, caption="A Precious Memory 💕")
+    except:
         st.markdown('''
-        <div class="photo-frame" style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1);">
-            <p style="color: white; text-align: center;">A precious<br>memory 💕</p>
+        <div style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); border-radius: 15px;">
+            <p style="color: white; text-align: center;">Replace IMAGE_URL_3<br>with your photo URL 💕</p>
         </div>
         ''', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # Reasons why I love you section
 st.markdown("<br><br>", unsafe_allow_html=True)
