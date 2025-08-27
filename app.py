@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Page configuration
 st.set_page_config(
-    page_title="Happy Birthday My Love ❤️",
+    page_title="Happy Birthday Saloni ❤️",
     page_icon="🎂",
     layout="wide",
     initial_sidebar_state="collapsed"
